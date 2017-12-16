@@ -1,0 +1,13 @@
+/////////////////////////////////////////////////////////////////////////////////////////
+// Title: Vulnserver TRUN command fuzzing template for Spike
+// Author: Marco Lugo
+// Usage: generic_send_tcp 192.168.x.x 9999 o_spikeFuzzer.spk 0 0
+//
+//              To get Stephen Bradshaw's Vulnserver, visit:
+//              http://www.thegreycorner.com/2010/12/introducing-vulnserver.html
+/////////////////////////////////////////////////////////////////////////////////////////
+
+s_readline(); // Get line from server and print it
+s_string("TRUN "); // Add "TRUN " to string
+s_string_variable("CONTENT"); // Add fuzzed string and send
+sleep(1); // Wait one second
